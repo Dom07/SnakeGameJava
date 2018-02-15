@@ -10,6 +10,7 @@ public class RenderPanel extends JPanel {
 
     public final Color red = Color.RED;
 
+    public  final Color blue = Color.BLUE;
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -20,10 +21,7 @@ public class RenderPanel extends JPanel {
         for(Point point : snake.snakeParts){
             g.fillRect(point.x * snake.SCALE, point.y * snake.SCALE, snake.SCALE, snake.SCALE);
         }
-
-        g.fillRect(snake.head.x, snake.head.y, snake.SCALE, snake.SCALE);
+        g.setColor(blue);
+        g.fillRect(snake.cherry.x * snake.SCALE, snake.cherry.y * snake.SCALE, snake.SCALE, snake.SCALE);
     }
-
-
-
 }
